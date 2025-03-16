@@ -397,19 +397,32 @@ namespace ExercisesPart1Solve
             //    }
             //}
             ///diamond shape 
-//            int n; // Change this for a bigger/smaller diamond
-//            Console.WriteLine("enter N :"); 
-//            n =int.Parse(Console.ReadLine());
+            //            int n; // Change this for a bigger/smaller diamond
+            //            Console.WriteLine("enter N :"); 
+            //            n =int.Parse(Console.ReadLine());
 
-//            for (int i = -n + 1; i < n; i++)
+            //            for (int i = -n + 1; i < n; i++)
+            //            {
+            //                Console.Write(new string(' ', Math.Abs(i)));
+            //                Console.WriteLine(new string('*', (2 * (n - Math.Abs(i))) - 1));
+            //            }
+            //        }
+            //    }
+            //}
+
+//            Console.Write("Enter a number: ");
+//            int n = int.Parse(Console.ReadLine());
+
+//            long factorial = 1;
+//            for (int i = 1; i <= n; i++)
 //            {
-//                Console.Write(new string(' ', Math.Abs(i)));
-//                Console.WriteLine(new string('*', (2 * (n - Math.Abs(i))) - 1));
+//                factorial *= i;
 //            }
+
+//            Console.WriteLine($"Factorial of {n} is {factorial}");
 //        }
 //    }
 //}
-
 
 
 
