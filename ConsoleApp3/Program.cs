@@ -231,16 +231,16 @@ namespace ExercisesPart1Solve
             //--------------------------------------------------
 
 
-            Console.WriteLine("enter a number ");
-            int n = int.Parse(Console.ReadLine());
+            //Console.WriteLine("enter a number ");
+            //int n = int.Parse(Console.ReadLine());
 
-            int counter;
+            //int counter;
 
-            for (counter = 0; counter <= n; counter++)
-            {
-                Console.WriteLine("Karim");
+            //for (counter = 0; counter <= n; counter++)
+            //{
+            //    Console.WriteLine("Karim");
 
-            }
+            //}
 
 
             //int num = 20;
@@ -251,16 +251,40 @@ namespace ExercisesPart1Solve
             //    num = int.Parse(Console.ReadLine());
             //}
 
-            int num = 0;
+            ////simple calculator 
+//            Console.Write("Enter first number: ");
+//            double num1 = double.Parse(Console.ReadLine());
 
-            do
-            {
-                Console.WriteLine("guess a number ");
-                num = int.Parse(Console.ReadLine());
-            }
-            while (num != 20);
-            //test
+//            Console.Write("Enter an operator (+, -, *, /): ");
+//            int op = int.Parse(Console.ReadLine());
 
-        }
-    }
-}
+//            Console.Write("Enter second number: ");
+//            double num2 = double.Parse(Console.ReadLine());
+//            switch (op)
+//            {
+//                case '+':
+//                    Console.WriteLine("Result: " + (num1 + num2));
+//                    break;
+//                case '-':
+//                    Console.WriteLine("Result: " + (num1 - num2));
+//                    break;
+//                case '*':
+//                    Console.WriteLine("Result: " + (num1 * num2));
+//                    break;
+//                case '/':
+//                    if (num2 != 0)
+//                        Console.WriteLine("Result: " + (num1 / num2));
+//                    else
+//                        Console.WriteLine("Error! Division by zero is not allowed.");
+//                    break;
+//                default:
+//                    Console.WriteLine("Invalid operator!");
+//                    break;
+
+//            }
+//            Console.ReadLine();
+//        }
+//    }
+//}
+
+            
