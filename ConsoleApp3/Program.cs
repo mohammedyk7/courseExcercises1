@@ -252,39 +252,98 @@ namespace ExercisesPart1Solve
             //}
 
             ////simple calculator 
-//            Console.Write("Enter first number: ");
-//            double num1 = double.Parse(Console.ReadLine());
+            //            Console.Write("Enter first number: ");
+            //            double num1 = double.Parse(Console.ReadLine());
 
-//            Console.Write("Enter an operator (+, -, *, /): ");
-//            int op = int.Parse(Console.ReadLine());
+            //            Console.Write("Enter an operator (+, -, *, /): ");
+            //            int op = int.Parse(Console.ReadLine());
 
-//            Console.Write("Enter second number: ");
-//            double num2 = double.Parse(Console.ReadLine());
-//            switch (op)
+            //            Console.Write("Enter second number: ");
+            //            double num2 = double.Parse(Console.ReadLine());
+            //            switch (op)
+            //            {
+            //                case '+':
+            //                    Console.WriteLine("Result: " + (num1 + num2));
+            //                    break;
+            //                case '-':
+            //                    Console.WriteLine("Result: " + (num1 - num2));
+            //                    break;
+            //                case '*':
+            //                    Console.WriteLine("Result: " + (num1 * num2));
+            //                    break;
+            //                case '/':
+            //                    if (num2 != 0)
+            //                        Console.WriteLine("Result: " + (num1 / num2));
+            //                    else
+            //                        Console.WriteLine("Error! Division by zero is not allowed.");
+            //                    break;
+            //                default:
+            //                    Console.WriteLine("Invalid operator!");
+            //                    break;
+
+            //            }
+            //            Console.ReadLine();
+            //        }
+            //    }
+            //}
+
+//            double balance = 1000;  // Starting balance
+
+//            while (true)
 //            {
-//                case '+':
-//                    Console.WriteLine("Result: " + (num1 + num2));
-//                    break;
-//                case '-':
-//                    Console.WriteLine("Result: " + (num1 - num2));
-//                    break;
-//                case '*':
-//                    Console.WriteLine("Result: " + (num1 * num2));
-//                    break;
-//                case '/':
-//                    if (num2 != 0)
-//                        Console.WriteLine("Result: " + (num1 / num2));
-//                    else
-//                        Console.WriteLine("Error! Division by zero is not allowed.");
-//                    break;
-//                default:
-//                    Console.WriteLine("Invalid operator!");
-//                    break;
+//                // Display the menu
+//                Console.WriteLine("\nATM Menu:");
+//                Console.WriteLine("1. Withdraw Money");
+//                Console.WriteLine("2. Deposit Money");
+//                Console.WriteLine("3. Check Balance");
+//                Console.WriteLine("4. Exit");
 
+//                // Get user input
+//                Console.Write("Select an option (1/2/3/4): ");
+//                int choice = int.Parse(Console.ReadLine());
+
+//                // Process based on the selected option
+//                switch (choice)
+//                {
+//                    case 1:
+//                        // Withdraw Money
+//                        Console.Write("Enter amount to withdraw: ");
+//                        double withdrawAmount = double.Parse(Console.ReadLine());
+//                        if (withdrawAmount <= balance)
+//                        {
+//                            balance -= withdrawAmount;
+//                            Console.WriteLine($"${withdrawAmount} withdrawn successfully. New balance: {balance}");
+//                        }
+//                        else
+//                        {
+//                            Console.WriteLine("Insufficient funds!");
+//                        }
+//                        break;
+
+//                    case 2:
+//                        // Deposit Money
+//                        Console.Write("Enter amount to deposit: ");
+//                        double depositAmount = double.Parse(Console.ReadLine());
+//                        balance += depositAmount;
+//                        Console.WriteLine($"${depositAmount} deposited successfully. New balance: {balance}");
+//                        break;
+
+//                    case 3:
+//                        // Check Balance
+//                        Console.WriteLine($"Your current balance is: {balance}");
+//                        break;
+
+//                    case 4:
+//                        // Exit
+//                        Console.WriteLine("Thank you for using the ATM. Goodbye!");
+//                        return;
+
+//                    default:
+//                        Console.WriteLine("Invalid choice. Please try again.");
+//                        break;
+//                }
 //            }
-//            Console.ReadLine();
 //        }
 //    }
 //}
-
-            
+//
