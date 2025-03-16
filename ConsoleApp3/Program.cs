@@ -287,63 +287,112 @@ namespace ExercisesPart1Solve
             //    }
             //}
 
-//            double balance = 1000;  // Starting balance
+            //            double balance = 1000;  // Starting balance
 
-//            while (true)
+            //            while (true)
+            //            {
+            //                // Display the menu
+            //                Console.WriteLine("\nATM Menu:");
+            //                Console.WriteLine("1. Withdraw Money");
+            //                Console.WriteLine("2. Deposit Money");
+            //                Console.WriteLine("3. Check Balance");
+            //                Console.WriteLine("4. Exit");
+
+            //                // Get user input
+            //                Console.Write("Select an option (1/2/3/4): ");
+            //                int choice = int.Parse(Console.ReadLine());
+
+            //                // Process based on the selected option
+            //                switch (choice)
+            //                {
+            //                    case 1:
+            //                        // Withdraw Money
+            //                        Console.Write("Enter amount to withdraw: ");
+            //                        double withdrawAmount = double.Parse(Console.ReadLine());
+            //                        if (withdrawAmount <= balance)
+            //                        {
+            //                            balance -= withdrawAmount;
+            //                            Console.WriteLine($"${withdrawAmount} withdrawn successfully. New balance: {balance}");
+            //                        }
+            //                        else
+            //                        {
+            //                            Console.WriteLine("Insufficient funds!");
+            //                        }
+            //                        break;
+
+            //                    case 2:
+            //                        // Deposit Money
+            //                        Console.Write("Enter amount to deposit: ");
+            //                        double depositAmount = double.Parse(Console.ReadLine());
+            //                        balance += depositAmount;
+            //                        Console.WriteLine($"${depositAmount} deposited successfully. New balance: {balance}");
+            //                        break;
+
+            //                    case 3:
+            //                        // Check Balance
+            //                        Console.WriteLine($"Your current balance is: {balance}");
+            //                        break;
+
+            //                    case 4:
+            //                        // Exit
+            //                        Console.WriteLine("Thank you for using the ATM. Goodbye!");
+            //                        return;
+
+            //                    default:
+            //                        Console.WriteLine("Invalid choice. Please try again.");
+            //                        break;
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+            // geometry calculator 
+            // Display the menu
+
+//            Console.WriteLine("Geometry Calculator");
+//            Console.WriteLine("Choose a shape:");
+//            Console.WriteLine("1. Circle (Calculate Area & Circumference)");
+//            Console.WriteLine("2. Square (Calculate Area & Perimeter)");
+//            Console.WriteLine("3. Triangle (Calculate Area)");
+//            // Get user input
+//            Console.Write("Select an option (1/2/3): ");
+//            int choice = int.Parse(Console.ReadLine());
+//            switch (choice)
 //            {
-//                // Display the menu
-//                Console.WriteLine("\nATM Menu:");
-//                Console.WriteLine("1. Withdraw Money");
-//                Console.WriteLine("2. Deposit Money");
-//                Console.WriteLine("3. Check Balance");
-//                Console.WriteLine("4. Exit");
+//                case 1:
 
-//                // Get user input
-//                Console.Write("Select an option (1/2/3/4): ");
-//                int choice = int.Parse(Console.ReadLine());
+//                    double radius = double.Parse(Console.ReadLine());
+//                    double areacircle = Math.PI * radius * radius;
+//                    double circumference = 2 * Math.PI * radius;
+//                    break;
+//                case 2:
+//                    // Square calculations
+//                    Console.Write("Enter the side length of the square: ");
+//                    double side = double.Parse(Console.ReadLine());
+//                    double areaSquare = side * side;
+//                    double perimeterSquare = 4 * side;
+//                    Console.WriteLine($"Area of Square:" + areaSquare);
+//                    Console.WriteLine($"Perimeter of Square" + perimeterSquare);
+//                    break;
+//                case 3:
+//                    Console.Write(" enter the base : ");
+//                    double Base = double.Parse(Console.ReadLine());
+//                    Console.Write(" enter the height : ");
+//                    double height = double.Parse(Console.ReadLine());
+//                    double areatriangle = 0.5 * height * Base;
+//                    Console.WriteLine(" enter the height of a triangle: " + height );
+//                    Console.WriteLine("enter the base of a triangle :" + Base );
+//                    Console.WriteLine("Area of triangle "  + areatriangle);
 
-//                // Process based on the selected option
-//                switch (choice)
-//                {
-//                    case 1:
-//                        // Withdraw Money
-//                        Console.Write("Enter amount to withdraw: ");
-//                        double withdrawAmount = double.Parse(Console.ReadLine());
-//                        if (withdrawAmount <= balance)
-//                        {
-//                            balance -= withdrawAmount;
-//                            Console.WriteLine($"${withdrawAmount} withdrawn successfully. New balance: {balance}");
-//                        }
-//                        else
-//                        {
-//                            Console.WriteLine("Insufficient funds!");
-//                        }
-//                        break;
+//                    break;
 
-//                    case 2:
-//                        // Deposit Money
-//                        Console.Write("Enter amount to deposit: ");
-//                        double depositAmount = double.Parse(Console.ReadLine());
-//                        balance += depositAmount;
-//                        Console.WriteLine($"${depositAmount} deposited successfully. New balance: {balance}");
-//                        break;
+//                default:
+//                    Console.WriteLine("Invalid choice. Please try again.");
+//                    break;
 
-//                    case 3:
-//                        // Check Balance
-//                        Console.WriteLine($"Your current balance is: {balance}");
-//                        break;
 
-//                    case 4:
-//                        // Exit
-//                        Console.WriteLine("Thank you for using the ATM. Goodbye!");
-//                        return;
 
-//                    default:
-//                        Console.WriteLine("Invalid choice. Please try again.");
-//                        break;
-//                }
 //            }
 //        }
 //    }
 //}
-//
