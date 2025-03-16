@@ -410,19 +410,39 @@ namespace ExercisesPart1Solve
             //    }
             //}
 
-//            Console.Write("Enter a number: ");
-//            int n = int.Parse(Console.ReadLine());
+            //            Console.Write("Enter a number: ");
+            //            int n = int.Parse(Console.ReadLine());
 
-//            long factorial = 1;
-//            for (int i = 1; i <= n; i++)
-//            {
-//                factorial *= i;
-//            }
+            //            long factorial = 1;
+            //            for (int i = 1; i <= n; i++)
+            //            {
+            //                factorial *= i;
+            //            }
 
-//            Console.WriteLine($"Factorial of {n} is {factorial}");
-//        }
-//    }
-//}
+            //            Console.WriteLine($"Factorial of {n} is {factorial}");
+            //        }
+            //    }
+            //}
 
 
 
+            Console.Write("Enter a number (N): ");
+            int n = int.Parse(Console.ReadLine());
+
+            int sumEven = 0, sumOdd = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 == 0)  // Check if even
+                {
+                    sumEven += i;
+                }
+                else             // Else, it's odd
+                    sumOdd += i;
+            }
+
+            Console.WriteLine($"Sum of even numbers:" + sumEven);
+            Console.WriteLine($"Sum of odd numbers:" + sumOdd);
+        }
+    }
+}
