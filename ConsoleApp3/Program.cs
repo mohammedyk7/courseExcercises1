@@ -349,50 +349,67 @@ namespace ExercisesPart1Solve
             // geometry calculator 
             // Display the menu
 
-//            Console.WriteLine("Geometry Calculator");
-//            Console.WriteLine("Choose a shape:");
-//            Console.WriteLine("1. Circle (Calculate Area & Circumference)");
-//            Console.WriteLine("2. Square (Calculate Area & Perimeter)");
-//            Console.WriteLine("3. Triangle (Calculate Area)");
-//            // Get user input
-//            Console.Write("Select an option (1/2/3): ");
-//            int choice = int.Parse(Console.ReadLine());
-//            switch (choice)
+            //            Console.WriteLine("Geometry Calculator");
+            //            Console.WriteLine("Choose a shape:");
+            //            Console.WriteLine("1. Circle (Calculate Area & Circumference)");
+            //            Console.WriteLine("2. Square (Calculate Area & Perimeter)");
+            //            Console.WriteLine("3. Triangle (Calculate Area)");
+            //            // Get user input
+            //            Console.Write("Select an option (1/2/3): ");
+            //            int choice = int.Parse(Console.ReadLine());
+            //            switch (choice)
+            //            {
+            //                case 1:
+
+            //                    double radius = double.Parse(Console.ReadLine());
+            //                    double areacircle = Math.PI * radius * radius;
+            //                    double circumference = 2 * Math.PI * radius;
+            //                    break;
+            //                case 2:
+            //                    // Square calculations
+            //                    Console.Write("Enter the side length of the square: ");
+            //                    double side = double.Parse(Console.ReadLine());
+            //                    double areaSquare = side * side;
+            //                    double perimeterSquare = 4 * side;
+            //                    Console.WriteLine($"Area of Square:" + areaSquare);
+            //                    Console.WriteLine($"Perimeter of Square" + perimeterSquare);
+            //                    break;
+            //                case 3:
+            //                    Console.Write(" enter the base : ");
+            //                    double Base = double.Parse(Console.ReadLine());
+            //                    Console.Write(" enter the height : ");
+            //                    double height = double.Parse(Console.ReadLine());
+            //                    double areatriangle = 0.5 * height * Base;
+            //                    Console.WriteLine(" enter the height of a triangle: " + height );
+            //                    Console.WriteLine("enter the base of a triangle :" + Base );
+            //                    Console.WriteLine("Area of triangle "  + areatriangle);
+
+            //                    break;
+
+            //                default:
+            //                    Console.WriteLine("Invalid choice. Please try again.");
+            //                    break;
+
+
+
+            //            }
+            //        }
+            //    }
+            //}
+            ///diamond shape 
+//            int n; // Change this for a bigger/smaller diamond
+//            Console.WriteLine("enter N :"); 
+//            n =int.Parse(Console.ReadLine());
+
+//            for (int i = -n + 1; i < n; i++)
 //            {
-//                case 1:
-
-//                    double radius = double.Parse(Console.ReadLine());
-//                    double areacircle = Math.PI * radius * radius;
-//                    double circumference = 2 * Math.PI * radius;
-//                    break;
-//                case 2:
-//                    // Square calculations
-//                    Console.Write("Enter the side length of the square: ");
-//                    double side = double.Parse(Console.ReadLine());
-//                    double areaSquare = side * side;
-//                    double perimeterSquare = 4 * side;
-//                    Console.WriteLine($"Area of Square:" + areaSquare);
-//                    Console.WriteLine($"Perimeter of Square" + perimeterSquare);
-//                    break;
-//                case 3:
-//                    Console.Write(" enter the base : ");
-//                    double Base = double.Parse(Console.ReadLine());
-//                    Console.Write(" enter the height : ");
-//                    double height = double.Parse(Console.ReadLine());
-//                    double areatriangle = 0.5 * height * Base;
-//                    Console.WriteLine(" enter the height of a triangle: " + height );
-//                    Console.WriteLine("enter the base of a triangle :" + Base );
-//                    Console.WriteLine("Area of triangle "  + areatriangle);
-
-//                    break;
-
-//                default:
-//                    Console.WriteLine("Invalid choice. Please try again.");
-//                    break;
-
-
-
+//                Console.Write(new string(' ', Math.Abs(i)));
+//                Console.WriteLine(new string('*', (2 * (n - Math.Abs(i))) - 1));
 //            }
 //        }
 //    }
 //}
+
+
+
+
