@@ -259,7 +259,7 @@ namespace ExercisesPart1Solve
                 num = int.Parse(Console.ReadLine());
             }
             while (num != 20);
-
+            //test
 
         }
     }
