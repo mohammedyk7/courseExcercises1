@@ -503,15 +503,37 @@ namespace ExercisesPart1Solve
             //    }
             //}
 
+            //            Console.Write("Enter a number (N): ");
+            //            int N = int.Parse(Console.ReadLine());
+
+            //            for (int i = 1; i <= N; i++)
+            //            {
+            //                for (int j = 1; j <= i; j++)
+            //                {
+            //                    Console.Write(" " + i);
+            //                }
+            //                Console.WriteLine();
+            //            }
+            //        }
+            //    }
+            //}
 //            Console.Write("Enter a number (N): ");
-//            int N = int.Parse(Console.ReadLine());
+//            int N = Convert.ToInt32(Console.ReadLine());
 
 //            for (int i = 1; i <= N; i++)
 //            {
-//                for (int j = 1; j <= i; j++)
+//                //spaces
+//                for (int j = 1; j <= N - i; j++)
 //                {
-//                    Console.Write(" " + i);
+//                    Console.Write(" ");
 //                }
+
+                
+//                for (int j = 1; j <= 2 * i - 1; j++)
+//                {
+//                    Console.Write("*");
+//                }
+
 //                Console.WriteLine();
 //            }
 //        }
