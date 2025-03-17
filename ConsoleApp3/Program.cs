@@ -517,24 +517,54 @@ namespace ExercisesPart1Solve
             //        }
             //    }
             //}
-//            Console.Write("Enter a number (N): ");
-//            int N = Convert.ToInt32(Console.ReadLine());
+            //            Console.Write("Enter a number (N): ");
+            //            int N = Convert.ToInt32(Console.ReadLine());
 
-//            for (int i = 1; i <= N; i++)
+            //            for (int i = 1; i <= N; i++)
+            //            {
+            //                //spaces
+            //                for (int j = 1; j <= N - i; j++)
+            //                {
+            //                    Console.Write(" ");
+            //                }
+
+
+            //                for (int j = 1; j <= 2 * i - 1; j++)
+            //                {
+            //                    Console.Write("*");
+            //                }
+
+            //                Console.WriteLine();
+            //            }
+            //        }
+            //    }
+            //}
+
+
+
+//            Random random = new Random();
+//            int targetNumber = random.Next(1, 101);
+//            int guess = 0;
+
+//            Console.WriteLine("Guess the number (between 1 and 100)!");
+
+//            while (guess != targetNumber)
 //            {
-//                //spaces
-//                for (int j = 1; j <= N - i; j++)
-//                {
-//                    Console.Write(" ");
-//                }
+//                Console.Write("Enter your guess: ");
+//                guess = int.Parse(Console.ReadLine());
 
-                
-//                for (int j = 1; j <= 2 * i - 1; j++)
+//                if (guess > targetNumber)
 //                {
-//                    Console.Write("*");
+//                    Console.WriteLine("Try Lower!");
 //                }
-
-//                Console.WriteLine();
+//                else if (guess < targetNumber)
+//                {
+//                    Console.WriteLine("Try Higher!");
+//                }
+//                else
+//                {
+//                    Console.WriteLine("You Win!");
+//                }
 //            }
 //        }
 //    }
