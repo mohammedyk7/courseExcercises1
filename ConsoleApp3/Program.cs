@@ -447,58 +447,73 @@ namespace ExercisesPart1Solve
             //    }
             //}
 
-//            Console.WriteLine("Scientific Calculator");
-//            Console.WriteLine("Choose an operation: sin, cos, tan, sqrt, log, pow");
-//            string operation = Console.ReadLine().ToLower();
+            //            Console.WriteLine("Scientific Calculator");
+            //            Console.WriteLine("Choose an operation: sin, cos, tan, sqrt, log, pow");
+            //            string operation = Console.ReadLine().ToLower();
 
-//            double num1, num2, result = 0;
+            //            double num1, num2, result = 0;
 
-//            switch (operation)
+            //            switch (operation)
+            //            {
+            //                case "sin":
+            //                    Console.Write("Enter angle in degrees: ");
+            //                    num1 = Convert.ToDouble(Console.ReadLine());
+            //                    result = Math.Sin(num1 * Math.PI / 180);
+            //                    break;
+
+            //                case "cos":
+            //                    Console.Write("Enter angle in degrees: ");
+            //                    num1 = Convert.ToDouble(Console.ReadLine());
+            //                    result = Math.Cos(num1 * Math.PI / 180);
+            //                    break;
+
+            //                case "tan":
+            //                    Console.Write("Enter angle in degrees: ");
+            //                    num1 = Convert.ToDouble(Console.ReadLine());
+            //                    result = Math.Tan(num1 * Math.PI / 180);
+            //                    break;
+
+            //                case "sqrt":
+            //                    Console.Write("Enter a number: ");
+            //                    num1 = Convert.ToDouble(Console.ReadLine());
+            //                    result = Math.Sqrt(num1);
+            //                    break;
+
+            //                case "log":
+            //                    Console.Write("Enter a number: ");
+            //                    num1 = Convert.ToDouble(Console.ReadLine());
+            //                    result = Math.Log(num1);
+            //                    break;
+
+            //                case "pow":
+            //                    Console.Write("Enter base: ");
+            //                    num1 = Convert.ToDouble(Console.ReadLine());
+            //                    Console.Write("Enter exponent: ");
+            //                    num2 = Convert.ToDouble(Console.ReadLine());
+            //                    result = Math.Pow(num1, num2);
+            //                    break;
+
+            //                default:
+            //                    Console.WriteLine("Invalid operation.");
+            //                    return;
+            //            }
+
+            //            Console.WriteLine("Result: " + result);
+            //        }
+            //    }
+            //}
+
+//            Console.Write("Enter a number (N): ");
+//            int N = int.Parse(Console.ReadLine());
+
+//            for (int i = 1; i <= N; i++)
 //            {
-//                case "sin":
-//                    Console.Write("Enter angle in degrees: ");
-//                    num1 = Convert.ToDouble(Console.ReadLine());
-//                    result = Math.Sin(num1 * Math.PI / 180);
-//                    break;
-
-//                case "cos":
-//                    Console.Write("Enter angle in degrees: ");
-//                    num1 = Convert.ToDouble(Console.ReadLine());
-//                    result = Math.Cos(num1 * Math.PI / 180);
-//                    break;
-
-//                case "tan":
-//                    Console.Write("Enter angle in degrees: ");
-//                    num1 = Convert.ToDouble(Console.ReadLine());
-//                    result = Math.Tan(num1 * Math.PI / 180);
-//                    break;
-
-//                case "sqrt":
-//                    Console.Write("Enter a number: ");
-//                    num1 = Convert.ToDouble(Console.ReadLine());
-//                    result = Math.Sqrt(num1);
-//                    break;
-
-//                case "log":
-//                    Console.Write("Enter a number: ");
-//                    num1 = Convert.ToDouble(Console.ReadLine());
-//                    result = Math.Log(num1);
-//                    break;
-
-//                case "pow":
-//                    Console.Write("Enter base: ");
-//                    num1 = Convert.ToDouble(Console.ReadLine());
-//                    Console.Write("Enter exponent: ");
-//                    num2 = Convert.ToDouble(Console.ReadLine());
-//                    result = Math.Pow(num1, num2);
-//                    break;
-
-//                default:
-//                    Console.WriteLine("Invalid operation.");
-//                    return;
+//                for (int j = 1; j <= i; j++)
+//                {
+//                    Console.Write(" " + i);
+//                }
+//                Console.WriteLine();
 //            }
-
-//            Console.WriteLine("Result: " + result);
 //        }
 //    }
 //}
