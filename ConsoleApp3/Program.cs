@@ -541,31 +541,29 @@ namespace ExercisesPart1Solve
             //}
 
 
+//            Console.Write("Enter the number of rows for the diamond: ");
+//            int n = int.Parse(Console.ReadLine());
 
-//            Random random = new Random();
-//            int targetNumber = random.Next(1, 101);
-//            int guess = 0;
-
-//            Console.WriteLine("Guess the number (between 1 and 100)!");
-
-//            while (guess != targetNumber)
+//            // Upper part of the diamond
+//            for (int i = 1; i <= n; i += 2)
 //            {
-//                Console.Write("Enter your guess: ");
-//                guess = int.Parse(Console.ReadLine());
+//                for (int j = 1; j <= (n - i) / 2; j++)
+//                    Console.Write(" ");
+//                for (int j = 1; j <= i; j++)
+//                    Console.Write("*");
+//                Console.WriteLine();
+//            }
 
-//                if (guess > targetNumber)
-//                {
-//                    Console.WriteLine("Try Lower!");
-//                }
-//                else if (guess < targetNumber)
-//                {
-//                    Console.WriteLine("Try Higher!");
-//                }
-//                else
-//                {
-//                    Console.WriteLine("You Win!");
-//                }
+//            // Lower part of the diamond
+//            for (int i = n - 2; i >= 1; i -= 2)
+//            {
+//                for (int j = 1; j <= (n - i) / 2; j++)
+//                    Console.Write(" ");
+//                for (int j = 1; j <= i; j++)
+//                    Console.Write("*");
+//                Console.WriteLine();
 //            }
 //        }
 //    }
 //}
+//// changes made in (i) only ...
