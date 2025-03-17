@@ -426,23 +426,79 @@ namespace ExercisesPart1Solve
 
 
 
-            Console.Write("Enter a number (N): ");
-            int n = int.Parse(Console.ReadLine());
+            //            Console.Write("Enter a number (N): ");
+            //            int n = int.Parse(Console.ReadLine());
 
-            int sumEven = 0, sumOdd = 0;
+            //            int sumEven = 0, sumOdd = 0;
 
-            for (int i = 1; i <= n; i++)
-            {
-                if (i % 2 == 0)  // Check if even
-                {
-                    sumEven += i;
-                }
-                else             // Else, it's odd
-                    sumOdd += i;
-            }
+            //            for (int i = 1; i <= n; i++)
+            //            {
+            //                if (i % 2 == 0)  // Check if even
+            //                {
+            //                    sumEven += i;
+            //                }
+            //                else             // Else, it's odd
+            //                    sumOdd += i;
+            //            }
 
-            Console.WriteLine($"Sum of even numbers:" + sumEven);
-            Console.WriteLine($"Sum of odd numbers:" + sumOdd);
-        }
-    }
-}
+            //            Console.WriteLine($"Sum of even numbers:" + sumEven);
+            //            Console.WriteLine($"Sum of odd numbers:" + sumOdd);
+            //        }
+            //    }
+            //}
+
+//            Console.WriteLine("Scientific Calculator");
+//            Console.WriteLine("Choose an operation: sin, cos, tan, sqrt, log, pow");
+//            string operation = Console.ReadLine().ToLower();
+
+//            double num1, num2, result = 0;
+
+//            switch (operation)
+//            {
+//                case "sin":
+//                    Console.Write("Enter angle in degrees: ");
+//                    num1 = Convert.ToDouble(Console.ReadLine());
+//                    result = Math.Sin(num1 * Math.PI / 180);
+//                    break;
+
+//                case "cos":
+//                    Console.Write("Enter angle in degrees: ");
+//                    num1 = Convert.ToDouble(Console.ReadLine());
+//                    result = Math.Cos(num1 * Math.PI / 180);
+//                    break;
+
+//                case "tan":
+//                    Console.Write("Enter angle in degrees: ");
+//                    num1 = Convert.ToDouble(Console.ReadLine());
+//                    result = Math.Tan(num1 * Math.PI / 180);
+//                    break;
+
+//                case "sqrt":
+//                    Console.Write("Enter a number: ");
+//                    num1 = Convert.ToDouble(Console.ReadLine());
+//                    result = Math.Sqrt(num1);
+//                    break;
+
+//                case "log":
+//                    Console.Write("Enter a number: ");
+//                    num1 = Convert.ToDouble(Console.ReadLine());
+//                    result = Math.Log(num1);
+//                    break;
+
+//                case "pow":
+//                    Console.Write("Enter base: ");
+//                    num1 = Convert.ToDouble(Console.ReadLine());
+//                    Console.Write("Enter exponent: ");
+//                    num2 = Convert.ToDouble(Console.ReadLine());
+//                    result = Math.Pow(num1, num2);
+//                    break;
+
+//                default:
+//                    Console.WriteLine("Invalid operation.");
+//                    return;
+//            }
+
+//            Console.WriteLine("Result: " + result);
+//        }
+//    }
+//}
