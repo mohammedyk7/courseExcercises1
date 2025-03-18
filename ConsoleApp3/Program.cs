@@ -42,7 +42,7 @@ namespace ExercisesPart1Solve
                     case 9: PrintDiamond(); break;
                     case 10: GuessGame(); break;
                     case 0: return;
-                    default: Console.WriteLine("Invalid Choice! Try again."); break;
+                    default: Console.WriteLine("Invalid Choice.. Try again.."); break;
                 }
                 Console.ReadLine();
             }
@@ -54,17 +54,17 @@ namespace ExercisesPart1Solve
             Console.Write("Enter first number: ");
             double num1 = double.Parse(Console.ReadLine());
             Console.Write("Enter operator (+, -, *, /): ");
-            char op = Console.ReadKey().KeyChar;
+            char operation = Console.ReadKey().KeyChar;
             Console.Write("\nEnter second number: ");
             double num2 = double.Parse(Console.ReadLine());
 
-            switch (op)
+            switch (operation)
             {
-                case '+': Console.WriteLine($"Result: {num1 + num2}"); break;
-                case '-': Console.WriteLine($"Result: {num1 - num2}"); break;
-                case '*': Console.WriteLine($"Result: {num1 * num2}"); break;
-                case '/': Console.WriteLine(num2 != 0 ? $"Result: {num1 / num2}" : "Error: Division by zero!"); break;
-                default: Console.WriteLine("Invalid operator!"); break;
+                case '+': Console.WriteLine("Area:" + (num1 + num2)); break;
+                case '-': Console.WriteLine("Area:" + (num1 - num2)); break;
+                case '*': Console.WriteLine("Area:" + (num1 * num2)); break;
+                case '/': Console.WriteLine(num2 != 0 ? "Area:" + (num1 / num2) : "Error: Division by zero!"); break;
+                default: Console.WriteLine("Invalid operator.."); break;
             }
         }
 
@@ -92,21 +92,21 @@ namespace ExercisesPart1Solve
                         Console.Write("Enter withdrawal amount: ");
                         double withdraw = double.Parse(Console.ReadLine());
                         if (withdraw > balance) Console.WriteLine("Insufficient funds!");
-                        else { balance -= withdraw; Console.WriteLine($"Withdrawal successful! New balance: {balance}"); }
+                        else { balance -= withdraw; Console.WriteLine($"Withdrawal successful! New balance:" + balance); }
                         break;
                     case 2:
                         Console.Write("Enter deposit amount: ");
                         double deposit = double.Parse(Console.ReadLine());
                         balance += deposit;
-                        Console.WriteLine($"Deposit successful! New balance: {balance}");
+                        Console.WriteLine("Deposit successful! New balance:" + balance);
                         break;
                     case 3:
-                        Console.WriteLine($"Current Balance: {balance}");
+                        Console.WriteLine($"Current Balance:" + balance);
                         break;
                     case 4:
                         return;
                     default:
-                        Console.WriteLine("Invalid choice!");
+                        Console.WriteLine("Invalid choice..");
                         break;
                 }
             }
@@ -130,22 +130,22 @@ namespace ExercisesPart1Solve
                 case 1:
                     Console.Write("Enter radius: ");
                     double r = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {Math.PI * r * r}, Circumference: {2 * Math.PI * r}");
+                    Console.WriteLine("Area: {Math.PI * r * r}, Circumference: {2 * Math.PI * r}");
                     break;
                 case 2:
                     Console.Write("Enter side length: ");
                     double s = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {s * s}, Perimeter: {4 * s}");
+                    Console.WriteLine("Area:" + s * s, " Perimeter:" + 4 * s);
                     break;
                 case 3:
                     Console.Write("Enter base: ");
                     double b = double.Parse(Console.ReadLine());
                     Console.Write("Enter height: ");
                     double h = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {0.5 * b * h}");
+                    Console.WriteLine("Area:" + (0.5 * b * h));
                     break;
                 default:
-                    Console.WriteLine("Invalid choice!");
+                    Console.WriteLine("Invalid choice..");
                     break;
             }
         }
@@ -168,7 +168,7 @@ namespace ExercisesPart1Solve
             int sumEven = 0, sumOdd = 0;
             for (int i = 1; i <= n; i++)
                 if (i % 2 == 0) sumEven += i; else sumOdd += i;
-            Console.WriteLine($"Sum of Even: {sumEven}, Sum of Odd: {sumOdd}");
+            Console.WriteLine("Area:" + sumEven, " Perimeter:" + sumOdd);
         }
 
         // 6. Scientific Calculator
