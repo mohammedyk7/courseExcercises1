@@ -254,6 +254,7 @@ namespace ex3_array
             for (int i = 0; i < numbers.Length; i++)
             {
                 Console.WriteLine(numbers[i]);
+
             }
         }
 
