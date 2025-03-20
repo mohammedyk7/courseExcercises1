@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace ex3_array
 {
@@ -11,18 +12,15 @@ namespace ex3_array
             {
                 Console.Clear();
                 Console.WriteLine("\nSelect a Program:");
-                Console.WriteLine("1. Simple Calculator");
-                Console.WriteLine("2. Basic ATM System");
-                Console.WriteLine("3. Geometry Calculator");
-                Console.WriteLine("4. Factorial of a Number");
-                Console.WriteLine("5. Sum of Even and Odd Numbers");
-                Console.WriteLine("6. Scientific Calculator");
-                Console.WriteLine("7. Print Triangle Pattern");
-                Console.WriteLine("8. Print Pyramid Pattern");
-                Console.WriteLine("9. Print Diamond Pattern");
-                Console.WriteLine("10. Guess the Number Game");
-                Console.WriteLine("11. Find Most Frequent Number in Array");
-                Console.WriteLine("12. Check if Array is Palindrome");
+                Console.WriteLine("1. Array Initialization & Output");
+                Console.WriteLine("2. Find Maximum & Minimum in an Array");
+                Console.WriteLine("3. Count Even & Odd Numbers");
+                Console.WriteLine("4. Reverse an Array");
+                Console.WriteLine("5. Search for a Number in an Array");
+                Console.WriteLine("6. Sorting an Array (Ascending Order)");
+                Console.WriteLine("7. Merging Two Arrays");
+                Console.WriteLine("8. Remove Duplicates from an Array");
+                Console.WriteLine("9. Second Largest Number in an Array");
                 Console.WriteLine("0. Exit");
 
                 Console.Write("Enter your choice: ");
@@ -34,18 +32,15 @@ namespace ex3_array
 
                 switch (choice)
                 {
-                    case 1: SimpleCalculator(); break;
-                    case 2: BasicATM(); break;
-                    case 3: GeometryCalculator(); break;
-                    case 4: Factorial(); break;
-                    case 5: SumEvenOdd(); break;
-                    case 6: ScientificCalculator(); break;
-                    case 7: PrintTriangle(); break;
-                    case 8: PrintPyramid(); break;
-                    case 9: PrintDiamond(); break;
-                    case 10: GuessGame(); break;
-                    case 11: FindMostFrequentNumberInArray(); break;
-                    case 12: CheckIfArrayIsPalindrome(); break;
+                    case 1: InitializeAndPrintArray(); break;
+                    case 2: FindMaxMinInArray(); break;
+                    case 3: CountEvenOddNumbers(); break;
+                    case 4: ReverseArray(); break;
+                    case 5: SearchNumberInArray(); break;
+                    case 6: SortArray(); break;
+                    case 7: MergeArrays(); break;
+                    case 8: RemoveDuplicatesFromArray(); break;
+                    case 9: FindSecondLargestInArray(); break;
                     case 0: return;
                     default: Console.WriteLine("Invalid Choice.. Try again.."); break;
                 }
@@ -53,213 +48,40 @@ namespace ex3_array
             }
         }
 
-        // 1. Simple Calculator
-        static void SimpleCalculator()
+        // 1. Array Initialization & Output
+        static void InitializeAndPrintArray()
         {
-            Console.Write("Enter first number: ");
-            double num1 = double.Parse(Console.ReadLine());
-            Console.Write("Enter operator (+, -, *, /): ");
-            char operation = Console.ReadKey().KeyChar;
-            Console.Write("\nEnter second number: ");
-            double num2 = double.Parse(Console.ReadLine());
+            int[] numbers = new int[5] { 10, 20, 30, 40, 50 };
 
-            switch (operation)
+            Console.WriteLine("Array elements:");
+            for (int i = 0; i < numbers.Length; i++)
             {
-                case '+': Console.WriteLine("Result: " + (num1 + num2)); break;
-                case '-': Console.WriteLine("Result: " + (num1 - num2)); break;
-                case '*': Console.WriteLine("Result: " + (num1 * num2)); break;
-                case '/': Console.WriteLine(num2 != 0 ? "Result: " + (num1 / num2) : "Error: Division by zero!"); break;
-                default: Console.WriteLine("Invalid operator.."); break;
+                Console.WriteLine(numbers[i]);
             }
         }
 
-        // 2. Basic ATM System
-        static void BasicATM()
+        // 2. Find Maximum & Minimum in an Array
+        static void FindMaxMinInArray()
         {
-            double balance = 1000;
-            while (true)
-            {
-                Console.WriteLine("\nATM Menu:");
-                Console.WriteLine("1. Withdraw");
-                Console.WriteLine("2. Deposit");
-                Console.WriteLine("3. Check Balance");
-                Console.WriteLine("4. Exit");
-                Console.Write("Enter your choice: ");
-                if (!int.TryParse(Console.ReadLine(), out int choice))
-                {
-                    Console.WriteLine("Invalid input! Please enter a number.");
-                    continue;
-                }
+            const int n = 10;
+            int[] numbers = new int[n];
 
-                switch (choice)
-                {
-                    case 1:
-                        Console.Write("Enter withdrawal amount: ");
-                        double withdraw = double.Parse(Console.ReadLine());
-                        if (withdraw > balance) Console.WriteLine("Insufficient funds!");
-                        else { balance -= withdraw; Console.WriteLine($"Withdrawal successful! New balance: " + balance); }
-                        break;
-                    case 2:
-                        Console.Write("Enter deposit amount: ");
-                        double deposit = double.Parse(Console.ReadLine());
-                        balance += deposit;
-                        Console.WriteLine("Deposit successful! New balance: " + balance);
-                        break;
-                    case 3:
-                        Console.WriteLine($"Current Balance: " + balance);
-                        break;
-                    case 4:
-                        return;
-                    default:
-                        Console.WriteLine("Invalid choice..");
-                        break;
-                }
-            }
-        }
-
-        // 3. Geometry Calculator
-        static void GeometryCalculator()
-        {
-            Console.WriteLine("\nChoose a shape:");
-            Console.WriteLine("1. Circle");
-            Console.WriteLine("2. Square");
-            Console.WriteLine("3. Triangle");
-            if (!int.TryParse(Console.ReadLine(), out int choice))
+            Console.WriteLine("Enter 10 numbers:");
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("Invalid input! Please enter a number.");
-                return;
+                Console.Write($"Enter element {i + 1}: ");
+                numbers[i] = int.Parse(Console.ReadLine());
             }
 
-            switch (choice)
-            {
-                case 1:
-                    Console.Write("Enter radius: ");
-                    double r = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {Math.PI * r * r}, Circumference: {2 * Math.PI * r}");
-                    break;
-                case 2:
-                    Console.Write("Enter side length: ");
-                    double s = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {s * s}, Perimeter: {4 * s}");
-                    break;
-                case 3:
-                    Console.Write("Enter base: ");
-                    double b = double.Parse(Console.ReadLine());
-                    Console.Write("Enter height: ");
-                    double h = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"Area: {0.5 * b * h}");
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice..");
-                    break;
-            }
+            int max = numbers.Max();
+            int min = numbers.Min();
+
+            Console.WriteLine($"Maximum value: {max}");
+            Console.WriteLine($"Minimum value: {min}");
         }
 
-        // 4. Factorial
-        static void Factorial()
-        {
-            Console.Write("Enter a number: ");
-            int n = int.Parse(Console.ReadLine());
-            long fact = 1;
-            for (int i = 1; i <= n; i++) fact *= i;
-            Console.WriteLine($"Factorial: {fact}");
-        }
-
-        // 5. Sum of Even and Odd Numbers
-        static void SumEvenOdd()
-        {
-            Console.Write("Enter N: ");
-            int n = int.Parse(Console.ReadLine());
-            int sumEven = 0, sumOdd = 0;
-            for (int i = 1; i <= n; i++)
-                if (i % 2 == 0) sumEven += i; else sumOdd += i;
-            Console.WriteLine($"Sum of Even Numbers: {sumEven}, Sum of Odd Numbers: {sumOdd}");
-        }
-
-        // 6. Scientific Calculator
-        static void ScientificCalculator()
-        {
-            Console.Write("Choose operation (sin, cos, tan, sqrt, log, pow): ");
-            string op = Console.ReadLine();
-            Console.Write("Enter number: ");
-            double num = double.Parse(Console.ReadLine());
-
-            switch (op)
-            {
-                case "sin": Console.WriteLine("Result: " + Math.Sin(num)); break;
-                case "cos": Console.WriteLine("Result: " + Math.Cos(num)); break;
-                case "tan": Console.WriteLine("Result: " + Math.Tan(num)); break;
-                case "sqrt": Console.WriteLine("Result: " + Math.Sqrt(num)); break;
-                case "log": Console.WriteLine("Result: " + Math.Log(num)); break;
-                case "pow":
-                    Console.Write("Enter exponent: ");
-                    double exp = double.Parse(Console.ReadLine());
-                    Console.WriteLine("Result: " + Math.Pow(num, exp));
-                    break;
-                default: Console.WriteLine("Invalid operation.."); break;
-            }
-        }
-
-        // 7. Print Triangle Pattern
-        static void PrintTriangle()
-        {
-            Console.Write("Enter N: ");
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
-                Console.WriteLine(new string('*', i));
-        }
-
-        // 8. Print Pyramid Pattern
-        static void PrintPyramid()
-        {
-            Console.Write("Enter N: ");
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
-                Console.WriteLine(new string(' ', n - i) + new string('*', 2 * i - 1));
-        }
-
-        // 9. Print Diamond Pattern
-        static void PrintDiamond()
-        {
-            Console.Write("Enter N: ");
-            int n = int.Parse(Console.ReadLine());
-
-            // Upper part of the diamond
-            for (int i = 1; i <= n; i++)
-            {
-                PrintRow(i, n);
-            }
-
-            // Lower part of the diamond
-            for (int i = n - 1; i >= 1; i--)
-            {
-                PrintRow(i, n);
-            }
-        }
-
-        // 10. Guess Game
-        static void GuessGame()
-        {
-            Random random = new Random();
-            int target = random.Next(1, 101);
-            int guess;
-
-            do
-            {
-                Console.Write("Guess the number (1-100): ");
-                guess = int.Parse(Console.ReadLine());
-
-                if (guess > target)
-                    Console.WriteLine("Try Lower!");
-                else if (guess < target)
-                    Console.WriteLine("Try Higher!");
-                else
-                    Console.WriteLine("You Win!");
-            } while (guess != target);
-        }
-
-        // 11. Find Most Frequent Number in Array
-        static void FindMostFrequentNumberInArray()
+        // 3. Count Even & Odd Numbers
+        static void CountEvenOddNumbers()
         {
             Console.Write("Enter the number of elements in the array: ");
             int n = int.Parse(Console.ReadLine());
@@ -272,37 +94,15 @@ namespace ex3_array
                 numbers[i] = int.Parse(Console.ReadLine());
             }
 
-            var frequencyDict = new Dictionary<int, int>();
+            int evenCount = numbers.Count(num => num % 2 == 0);
+            int oddCount = numbers.Count(num => num % 2 != 0);
 
-            foreach (var number in numbers)
-            {
-                if (frequencyDict.ContainsKey(number))
-                {
-                    frequencyDict[number]++;
-                }
-                else
-                {
-                    frequencyDict[number] = 1;
-                }
-            }
-
-            int mostFrequentNumber = numbers[0];
-            int maxCount = 0;
-
-            foreach (var pair in frequencyDict)
-            {
-                if (pair.Value > maxCount || (pair.Value == maxCount && pair.Key < mostFrequentNumber))
-                {
-                    maxCount = pair.Value;
-                    mostFrequentNumber = pair.Key;
-                }
-            }
-
-            Console.WriteLine($"The most frequent number is: {mostFrequentNumber} (appears {maxCount} times)");
+            Console.WriteLine($"Number of even numbers: {evenCount}");
+            Console.WriteLine($"Number of odd numbers: {oddCount}");
         }
 
-        // 12. Check if Array is Palindrome
-        static void CheckIfArrayIsPalindrome()
+        // 4. Reverse an Array
+        static void ReverseArray()
         {
             Console.Write("Enter the number of elements in the array: ");
             int n = int.Parse(Console.ReadLine());
@@ -315,38 +115,162 @@ namespace ex3_array
                 numbers[i] = int.Parse(Console.ReadLine());
             }
 
-            bool isPalindrome = true;
-            for (int i = 0; i < n / 2; i++)
+            Array.Reverse(numbers);
+
+            Console.WriteLine("Reversed array:");
+            for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] != numbers[n - i - 1])
-                {
-                    isPalindrome = false;
-                    break;
-                }
+                Console.WriteLine(numbers[i]);
+            }
+        }
+
+        // 5. Search for a Number in an Array
+        static void SearchNumberInArray()
+        {
+            Console.Write("Enter the number of elements in the array: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] numbers = new int[n];
+
+            Console.WriteLine("Enter the elements of the array:");
+            for (int i = 0; i < n; i++)
+            {
+                numbers[i] = int.Parse(Console.ReadLine());
             }
 
-            if (isPalindrome)
+            Console.Write("Enter the number to search for: ");
+            int searchNumber = int.Parse(Console.ReadLine());
+
+            int index = Array.IndexOf(numbers, searchNumber);
+
+            if (index != -1)
             {
-                Console.WriteLine("The array is a palindrome.");
+                Console.WriteLine("Number found at index: " + index);
             }
             else
             {
-                Console.WriteLine("The array is not a palindrome.");
+                Console.WriteLine("Number not found in the array.");
             }
         }
 
-        static void PrintRow(int i, int n)
+        // 6. Sorting an Array (Ascending Order)
+        static void SortArray()
         {
-            Console.Write(new string(' ', n - i));
-            Console.WriteLine(new string('*', 2 * i - 1));
+            Console.Write("Enter the number of elements in the array: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] numbers = new int[n];
+
+            Console.WriteLine("Enter the elements of the array:");
+            for (int i = 0; i < n; i++)
+            {
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(numbers);
+
+            Console.WriteLine("Sorted array in ascending order:");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+        }
+
+        // 7. Merging Two Arrays
+        static void MergeArrays()
+        {
+            Console.Write("Enter the number of elements for each array: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] array1 = new int[n];
+            int[] array2 = new int[n];
+
+            Console.WriteLine("Enter the elements of the first array:");
+            for (int i = 0; i < n; i++)
+            {
+                array1[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Enter the elements of the second array:");
+            for (int i = 0; i < n; i++)
+            {
+                array2[i] = int.Parse(Console.ReadLine());
+            }
+
+            int[] mergedArray = new int[array1.Length + array2.Length];
+            array1.CopyTo(mergedArray, 0);
+            array2.CopyTo(mergedArray, array1.Length);
+
+            Console.WriteLine("The merged array is: " + string.Join(", ", mergedArray));
+        }
+
+        // 8. Remove Duplicates from an Array
+        static void RemoveDuplicatesFromArray()
+        {
+            Console.Write("Enter the number of elements in the array: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] numbers = new int[n];
+
+            Console.WriteLine("Enter the elements of the array:");
+            for (int i = 0; i < n; i++)
+            {
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+
+            int[] uniqueNumbers = numbers.Distinct().ToArray();
+
+            Console.WriteLine("Unique numbers in the array:");
+            for (int i = 0; i < uniqueNumbers.Length; i++)
+            {
+                Console.WriteLine(uniqueNumbers[i]);
+            }
+        }
+
+        // 9. Second Largest Number in an Array
+        static void FindSecondLargestInArray()
+        {
+            Console.Write("Enter the number of elements: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] array = new int[n];
+
+            Console.WriteLine("Enter the elements:");
+            for (int i = 0; i < n; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            int secondLargest = FindSecondLargest(array);
+
+            Console.WriteLine("The second largest number is: " + secondLargest);
+        }
+
+        static int FindSecondLargest(int[] arr)
+        {
+            int largest = int.MinValue;
+            int secondLargest = int.MinValue;
+
+            foreach (int num in arr)
+            {
+                if (num > largest)
+                {
+                    secondLargest = largest;
+                    largest = num;
+                }
+                else if (num > secondLargest && num != largest)
+                {
+                    secondLargest = num;
+                }
+            }
+
+            if (secondLargest == int.MinValue)
+            {
+                Console.WriteLine("No second largest number found.");
+                return -1;
+            }
+
+            return secondLargest;
         }
     }
 }
-
-
-
-
-        
-
-       
-
